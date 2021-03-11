@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "image_to_text"
+version = "0.1.0"
+description = ""
+authors = ["yutanakamura-tky <yutanakamura.tky@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+isort = "^5.7.0"
+flake8 = "^3.8.4"
+pre-commit = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
