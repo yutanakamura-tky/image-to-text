@@ -14,7 +14,13 @@ This is a template repository customized for quick set up of research projects.
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
-2. Fill the blank in `pyproject.toml` with your favorite project name: 
+2. Change Config:
+
+```sh
+poetry config virtualenvs.in-project true
+```
+
+3. Fill the blank in `pyproject.toml` with your favorite project name: 
 
 ```sh
 vi /path/to/project/pyproject.toml
@@ -28,20 +34,20 @@ name = "" # REPLACE WITH YOUR FAVORITE PROJECT NAME
 ...
 ```
 
-3. Update your project:
+4. Update your project:
 
 ```sh
 poetry update
 ```
 
-4. Install packages using Poetry:
+5. Install packages using Poetry:
 
 ```sh
 cd /path/to/project
 poetry install
 ```
 
-5. Install pre-commit hook:
+6. Install pre-commit hook:
 
 ```sh
 cd /path/to/project
