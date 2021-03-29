@@ -19,7 +19,7 @@ poetry install
 vi /path/to/project/pyproject.toml
 ```
 
-```toml
+```
 (pyproject.toml)
 
 [tool.poetry]
