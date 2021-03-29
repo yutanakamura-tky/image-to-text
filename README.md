@@ -1,3 +1,7 @@
+# What's this?
+
+This is a template repository customized for quick set up of research projects.
+
 # Requirements
 
 - Python > 3.6.4
