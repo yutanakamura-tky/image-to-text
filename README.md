@@ -1,3 +1,7 @@
+# Requirements
+
+- Python > 3.6.4
+
 # How to use this
 
 1. Install Poetry:
