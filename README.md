@@ -27,13 +27,13 @@ name = "" # REPLACE WITH YOUR FAVORITE PROJECT NAME
 ...
 ```
 
-Then update your project:
+4. Update your project:
 
 ```sh
 poetry update
 ```
 
-4. Install pre-commit hook:
+5. Install pre-commit hook:
 
 ```sh
 cd /path/to/project
