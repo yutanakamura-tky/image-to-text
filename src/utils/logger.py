@@ -4,6 +4,20 @@ import pathlib
 import sys
 
 
+def get_logger(
+    name: str,
+    log_save_path: pathlib.PosixPath,
+    level: int = logging.INFO,
+    file_level: int = logging.DEBUG,
+    stream_level: int = logging.INFO,
+):
+    logger = logging.getLogger(name=name)
+    logger.addHandler(get_stream_handler(level=stream_level))
+    logger.addHandler(get_file_handler(log_save_path=log_save_path, level=file_level))
+    logger.setLevel(level)
+    return logger
+
+
 def get_stream_handler(level: int = logging.INFO) -> logging.Handler:
     plain_log_formatter = logging.Formatter("{message}", style="{")
     plain_log_formatter.converter = get_time_struct_time_now
