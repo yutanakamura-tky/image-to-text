@@ -5,10 +5,9 @@ description = ""
 authors = ["yutanakamura-tky <yutanakamura.tky@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.6.4"
+python = "^3.8"
 numpy = "<1.20.2"
 pandas = "<1.2.3"
-notebook = "^6.3.0"
 torch = "^1.8.1"
 sklearn = "^0.0"
 transformers = "^4.4.2"
@@ -18,7 +17,6 @@ seaborn = "^0.11.1"
 plotly = "^4.14.3"
 scipy = "<1.6.2"
 torchvision = "^0.9.1"
-torchtext = "^0.9.1"
 allennlp = "^2.2.0"
 
 [tool.poetry.dev-dependencies]
@@ -29,6 +27,7 @@ pre-commit = "^2.11.1"
 pytest = "^6.2.2"
 ipykernel = "^5.5.3"
 jupyter = "^1.0.0"
+notebook = "^6.3.0"
 ipywidgets = "^7.6.3"
 
 [build-system]
