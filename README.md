@@ -11,7 +11,7 @@ This is a template repository customized for quick set up of research projects.
 1. Install Poetry:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 2. Change Config:
