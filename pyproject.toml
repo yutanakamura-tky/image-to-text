@@ -20,7 +20,7 @@ torchvision = "^0.9.1"
 allennlp = "^2.2.0"
 
 [tool.poetry.dev-dependencies]
-black = "^20.8b1"
+black = ">22.0"
 isort = "^5.7.0"
 flake8 = "^3.8.4"
 pre-commit = "^2.11.1"
