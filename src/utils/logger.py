@@ -10,7 +10,7 @@ def get_logger(
     level: int = logging.INFO,
     file_level: int = logging.DEBUG,
     stream_level: int = logging.INFO,
-):
+) -> logging.Logger:
     logger = logging.getLogger(name=name)
     logger.addHandler(get_stream_handler(level=stream_level))
     logger.addHandler(get_file_handler(log_save_path=log_save_path, level=file_level))
