@@ -1,3 +1,6 @@
+[tool.isort]
+profile = "black"
+
 [project]
 name = "template"
 version = "0.1.0"
