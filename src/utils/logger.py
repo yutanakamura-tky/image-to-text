@@ -11,6 +11,15 @@ def get_logger(
     file_level: int = logging.DEBUG,
     stream_level: int = logging.INFO,
 ) -> logging.Logger:
+    """
+    Example
+    ---
+    >>> logger = get_logger(
+        name = __name__,
+        log_save_path = "path/to/log"
+    )
+    >>> logger.info("This is a log")  # Caution: logger.log is a WRONG method
+    """
     logger = logging.getLogger(name=name)
     logger.addHandler(get_stream_handler(level=stream_level))
     logger.addHandler(get_file_handler(log_save_path=log_save_path, level=file_level))
