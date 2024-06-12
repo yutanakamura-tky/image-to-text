@@ -5,22 +5,26 @@ This is a template repository customized for quick set up of research projects.
 # Requirements
 
 - Python => 3.8
+- Rye 0.33.0
 
 # How to use this
 
-1. Install Poetry:
+1. Install Rye:
 
 ```sh
-curl -sSL https://install.python-poetry.org | python3 -
+curl -sSf https://rye.astral.sh/get | bash
 ```
 
-2. Change Config:
+2. Add Shims to Path & add shell completion:
 
 ```sh
-poetry config virtualenvs.in-project true
+echo 'source "$HOME/.rye/env"' >> ~/.profile
+mkdir -p ~/.local/share/bash-completion/completions
+rye self completion > ~/.local/share/bash-completion/completions/rye.bash
+source ~/.bashrc
 ```
 
-3. Fill the blank in `pyproject.toml` with your favorite project name: 
+3. Update `pyproject.toml` with your favorite project name: 
 
 ```sh
 vi /path/to/project/pyproject.toml
@@ -29,25 +33,18 @@ vi /path/to/project/pyproject.toml
 ```
 (pyproject.toml)
 
-[tool.poetry]
-name = "" # REPLACE WITH YOUR FAVORITE PROJECT NAME
-...
+[project]
+name = "template"  # Replace with your project name
 ```
 
-4. Update your project:
-
-```sh
-poetry update
-```
-
-5. Install packages using Poetry:
+4. Install packages using Poetry:
 
 ```sh
 cd /path/to/project
-poetry install
+rye sync
 ```
 
-6. Install pre-commit hook:
+5. Install pre-commit hook:
 
 ```sh
 cd /path/to/project
